@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模仿天猫官网</title>
+    <link rel="icon" href="image/site/lable.png">
+    <script src="js/jquery/2.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap/3.3.6/bootstrap.min.css">
+    <script src="js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+<!-- 猫耳朵效果 -->
+    <script>
+    $(function () {
+        $(".nav_right a").mouseenter(function () {
+            var left=$(this).position().left;
+            var top=$(this).position().top;
+            var width=$(this).css("width");
+            var imgleft=parseInt(left)+parseInt(width)/2;
+            $("img#catear").css("left",imgleft);
+            $("img#catear").css("top",top-16);
+            $("img#catear").fadeIn(500);
+          })
+        $(".nav_right a").mouseleave(function () {
+            $("img#catear").hide();
+        })
+    })
+    </script>
+<!-- 产品显示效果 -->
+    <script>
+    function showlistright(cid){
+        $(".eachlist[cid="+cid+"]").css("background-color","white");
+        $(".eachlist[cid="+cid+"] a").css("color","#87cefa");
+        $(".list_right[cid="+cid+"]").show();
+    }
+
+    function hidelistright(cid){
+        $(".eachlist[cid="+cid+"]").css("background-color","#e2e2e3");
+        $("div.eachlist[cid="+cid+"] a").css("color","#000");
+        $(".list_right[cid="+cid+"]").hide();
+    }
+
+    $(function () { 
+        $(".eachlist").mouseenter(function () { 
+            var cid=$(this).attr("cid");
+            showlistright(cid);
+        })
+        $(".eachlist").mouseleave(function () { 
+             var cid=$(this).attr("cid");
+             hidelistright(cid);
+        })
+        $(".list_right").mouseenter(function () { 
+            var cid=$(this).attr("cid");
+            showlistright(cid);
+        })
+        $(".list_right").mouseleave(function () { 
+            var cid=$(this).attr("cid");
+            hidelistright(cid);
+        })
+     })
+    </script>
+   
+   <script>
+        $(function () {
+            $("div#footer2 a[href$=#nowhere]").click(function(){
+            alert("不提供此功能！");
+            });
+        })
+    </script>
+</head>
+
+<body>       
+<!-- 导航 -->
+    <nav class="top">
+        <a href="home.html"><span class="glyphicon glyphicon-home redColor">
+        </span>天猫首页</a>
+            
+        <span>喵，欢迎来到天猫</span>
+            <a href="login.html">请登录</a>
+            <a href="regist.html">免费注册</a>
+        
+        <span class="pull-right">    
+            <a href="order.html">我的订单</a>
+            <a href="shoppingcart.html"><span class="glyphicon glyphicon-shopping-cart redColor">
+            </span>购物车<strong>0</strong> 件</a>
+        </span>
+    </nav>
+<!-- 搜索 -->
+    <div>
+        <a href="home.html"><img class="logo" src="image/site/logo.gif"></a>
+        <div class="searchDiv">
+            <input type="text" placeholder="夏日遮阳帽 棒球帽">
+            <button type="submit" class="searchButton">搜索</button> 
+            <div class="searchBelow">
+                <span><a href="classifypage.html">平衡车</a><span>|</span></span>
+                <span><a href="classifypage.html">扫地机器人</a><span>|</span></span>
+                <span><a href="classifypage.html">原汁机</a><span>|</span></span>
+                <span><a href="classifypage.html">冰箱</a></span>
+            </div>
+        </div>
+    </div>
+<!-- 指引与列表 -->
+    <img  id="catear" src="image/site/catear.png" style="position: absolute;height: 15px;display: none;">
+    <div class="navigation">
+        <div class="nav_head">
+            <div class="nav_left">
+                <span class="glyphicon glyphicon-th-list"></span>
+                <span>商品分类</span>
+            </div>
+            <div class="nav_right">
+                <a href="#nowhere"><img src="image/site/chaoshi.png"></a>
+                <a href="#nowhere"><img src="image/site/guoji.png"></a>
+                <a href="classifypage.html">平板电视</a>
+                <a href="classifypage.html">马桶</a>
+                <a href="classifypage.html">沙发</a>
+                <a href="classifypage.html">电热水器</a>
+            </div>
+        </div>
+        <!-- 产品分类 -->
+        <div style="position: relative;">
+        <div class="listtable">
+                <div class="list_left">
+                    <div class="eachlist" cid="1"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">平板电视</a></div>
+                    <div class="eachlist" cid="2"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">马桶</a></div>
+                    <div class="eachlist" cid="3"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">沙发</a></div>
+                    <div class="eachlist" cid="4"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">电热水器</a></div>
+                    <div class="eachlist" cid="5"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">平衡车</a></div>
+                    <div class="eachlist" cid="6"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">扫地机器人</a></div>
+                    <div class="eachlist" cid="7"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">原汁机</a></div>
+                    <div class="eachlist" cid="8"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">冰箱</a></div>
+                    <div class="eachlist" cid="9"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">空调</a></div>
+                    <div class="eachlist" cid="10"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">女表</a></div>
+                    <div class="eachlist" cid="11"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">男表</a></div>
+                    <div class="eachlist" cid="12"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">男士手拿包</a></div>
+                    <div class="eachlist" cid="13"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">男士西服</a></div>
+                    <div class="eachlist" cid="14"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">时尚男鞋</a></div>
+                    <div class="eachlist" cid="15"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">品牌女装</a></div>
+                    <div class="eachlist" cid="16"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">太阳镜</a></div>
+                    <div class="eachlist" cid="17"><span class="glyphicon glyphicon-link"></span><a href="classifypage.html">安全座椅</a></div>
+                </div>
+                <div class="list_right" cid="1" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="2" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="3" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="4" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="5" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="6" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="7" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="8" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="9" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="10" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="11" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="12" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="13" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="14" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="15" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="16" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+                <div class="list_right" cid="17" style="display: none">
+                    <div class="each_list">
+                        <a href="#nowhere">屏大影院</a>
+                        <a href="#nowhere">周末</a>
+                        <a href="#nowhere" style="color: #87cefa">新品特惠</a>
+                        <a href="#nowhere">32时电视机</a>
+                        <a href="#nowhere">智能网络</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">USB高清解</a>
+                        <a href="#nowhere">芒果TV在线</a>
+                        <a href="#nowhere" style="color: #87cefa">抢购价</a>
+                        <a href="#nowhere">USB解码</a>
+                        <a href="#nowhere">32英吋</a>
+                        <a href="#nowhere">10核</a>
+                        <a href="#nowhere">TCL品牌日</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">不要赠品</a>
+                        <a href="#nowhere" style="color: #87cefa">新品上市</a>
+                        <a href="#nowhere">4k硬屏</a>
+                        <a href="#nowhere">领100元劵</a>
+                        <a href="#nowhere" style="color: #87cefa">智能高清</a>
+                        <a href="#nowhere">8月，酷暑</a>
+                        <a href="#nowhere">大促</a>
+                        <a href="#nowhere">天猫定制</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">智能系统</a>
+                        <a href="#nowhere">金色外观</a>
+                        <a href="#nowhere">三星屏幕</a>
+                        <a href="#nowhere">客厅爆款</a>
+                        <a href="#nowhere" style="color: #87cefa">八核配置</a>
+                        <a href="#nowhere">限时特惠</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">限时特惠</a>
+                        <a href="#nowhere">热销爆款</a>
+                        <a href="#nowhere">4k全高清</a>
+                        <a href="#nowhere">六核智能</a>
+                        <a href="#nowhere">14核4k</a>
+                        <a href="#nowhere">YUNOS</a>
+                        <a href="#nowhere" style="color: #87cefa">YUN</a>
+                        <a href="#nowhere">64位处理器</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">OS</a>
+                        <a href="#nowhere">微信电视</a>
+                        <a href="#nowhere">4k高清</a>
+                        <a href="#nowhere">3k高清</a>
+                        <a href="#nowhere">10核机芯</a>
+                        <a href="#nowhere">黑油底座</a>
+                        <a href="#nowhere">4k高清</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere" style="color: #87cefa">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                        <a href="#nowhere">真6k屏</a>
+                        <a href="#nowhere">1</a>
+                        <a href="#nowhere">2</a>
+                        <a href="#nowhere">3</a>
+                    </div>
+                    <div class="each_list">
+                        <a href="#nowhere">64位14核</a>
+                        <a href="#nowhere">海量影视</a>
+                        <a href="#nowhere">人气爆款</a>
+                        <a href="#nowhere">特惠</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- bootstrap轮播插件 -->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                </ol>
+               
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="image/lunbo/1.jpg" >
+                  </div>
+                  <div class="item">
+                          <img src="image/lunbo/2.jpg" >
+                  </div>
+                  <div class="item">
+                          <img src="image/lunbo/3.jpg" >
+                  </div>          
+                  <div class="item">
+                          <img src="image/lunbo/4.jpg" >
+                    </div>
+                </div>
+                 <!-- 控制方向 -->
+                <!-- <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>   
+                                   -->        
+        </div>
+    </div>
+<!-- 部分产品展示 -->
+    <div class="productdetail">
+        <div class="per_product">
+            <span class="per_head">平板电视</span><br>
+            <div class="per_detail">
+                <a href="TV-detail.html"><img src="image/site/T1_2.PNG"></a>
+                <a href="TV-detail.html"><span class="per2">[热销] ChangHong/长虹 65S1安卓智</span></a>
+                <span class="per3">3,824.16</span>
+            </div>
+            <div class="per_detail">
+                <a href="#nowhere"><img src="image/site/T1_1.PNG"></a>
+                <a href="#nowhere"><span class="per2">[热销] 夏普屏PANDA/熊猫 LE39D71S</span></a>
+                <span class="per3">1,874.25</span>
+            </div>
+            <div class="per_detail">
+                <a href="#nowhere"><img src="image/site/T1_3.PNG"></a>
+                <a href="#nowhere"><span class="per2">[热销] Hisense/海信 LED40EC52</span></a>
+                <span class="per3">1,439.40</span>
+            </div>
+            <div class="per_detail">
+                <a href="#nowhere"><img src="image/site/T1_4.PNG"></a>
+                <a href="#nowhere"><span class="per2">[热销] Hisense/海信 LED49EC32</span></a>
+                <span class="per3">1,679.40</span>
+            </div>
+            <div class="per_detail">
+                <a href="#nowhere"><img src="image/site/T1_5.PNG"></a>
+                <a href="#nowhere"><span class="per2">[热销] Konka康佳 LED32S1卧室32</span></a>
+                <span class="per3">1,104.35</span>
+            </div>
+        </div>
+        <div class="per_product">
+            <span class="per_head">马桶</span><br>
+            <div class="per_detail">
+                <a href="#nowhere"><img src="image/site/T2_1.PNG"></a>
+                <a href="#nowhere"><span class="per2">[热销]纳蒂兰卡 1082卫浴洁具 钻石切边 坐</span></a>
+                <span class="per3">1,710.00</span>
+            </div>
+            <div class="per_detail">
+                <a href="#nowhere"><img src="image/site/T2_2.PNG"></a>
+                <a href="#nowhere"><span class="per2">[热销] 德国DGPOSY超漩式彩色马桶缓降坐便器</span></a>
+                <span class="per3">1,799.25</span>
+            </div>
+            <div class="per_detail">
+                <a href="#nowhere"><img src="image/site/T2_3.PNG"></a>
+                <a href="#nowhere"><span class="per2">[热销] 纳蒂兰卡1066卫浴漩冲虹吸式马桶350</span></a>
+                <span class="per3">1,503.00</span>
+            </div>
+            <div class="per_detail">
+                <a href="#nowhere"><img src="image/site/T2_4.PNG"></a>
+                <a href="#nowhere"><span class="per2">[热销] 箭牌马桶/ARROW AB1118脲醛盖</span></a>
+                <span class="per3">1,482.00</span>
+            </div>
+            <div class="per_detail">
+                <a href="#nowhere"><img src="image/site/T2_5.PNG"></a>
+                <a href="#nowhere"><span class="per2">[热销] 乐洁士智能马桶高品质全自动遥控感应一体式</span></a>
+                <span class="per3">8,512.00</span>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <div><img src="image/site/end.png" style="margin:50px auto;display:block;"></div>
+    </div>
+<!-- 页脚 -->
+<div class="footer" id="footer" style="display: block">
+        <div class="footer_ensure" id="footer_ensure">
+            <a href="#nowhere"><img src="image/site/ensure.png"></a>
+        </div>
+
+        <div class="footer_desc" id="footer_desc">
+            <div class="column">
+                <span class="columnTitle">购物指南</span>
+                <a href="#nowhere">免费注册</a>
+                <a href="#nowhere">开通支付宝</a>
+                <a href="#nowhere">支付宝充值</a>
+            </div>
+            <div class="column">
+                <span class="columnTitle">天猫保障</span>
+                <a href="#nowhere">发票保障</a>
+                <a href="#nowhere">售后规则</a>
+                <a href="#nowhere">缺货赔付</a>
+            </div>
+            <div class="column">
+                <span class="columnTitle">支付方式</span>
+                <a href="#nowhere">快捷支付</a>
+                <a href="#nowhere">信用卡</a>
+                <a href="#nowhere">蚂蚁花呗</a>
+                <a href="#nowhere">货到付款</a>
+            </div>
+            <div class="column">
+                <span class="columnTitle">商家服务</span>
+                <a href="#nowhere">商家入驻</a>
+                <a href="#nowhere">商家中心</a>
+                <a href="#nowhere">天猫智库</a>
+                <a href="#nowhere">天猫规则</a>
+                <a href="#nowhere">物流服务</a>
+                <a href="#nowhere">喵言喵语</a>
+                <a href="#nowhere">运营服务</a>
+            </div>
+            <div class="column">
+                <span class="columnTitle">手机天猫</span>
+                <a href="#nowhere"><img src="image/site/ma.png"></a>
+            </div>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+
+    <img src="image/site/cateye.png" class="cateye" id="cateye">
+    <div class="footer2" id="footer2" style="display: block">
+        <div class="copyRight" id="copyRight">        
+            <div class="white_link">
+                <a href="#nowhere">关于天猫</a>
+                <a href="#nowhere">帮助中心</a>
+                <a href="#nowhere">开放平台</a>
+                <a href="#nowhere">诚聘英才</a>
+                <a href="#nowhere">联系我们</a>
+                <a href="#nowhere">网站合作</a>
+                <a href="#nowhere">法律声明</a>
+                <a href="#nowhere">知识产权</a>
+                <a href="#nowhere">廉政举报</a>
+            </div>
+            <div class="white_link">
+                <span><a href="#nowhere">阿里巴巴集团</a><span class="slash">|</span></span>
+                <span><a href="#nowhere">淘宝网</a><span>|</span></span>
+                <span><a href="#nowhere">天猫</a><span>|</span></span>
+                <span><a href="#nowhere">聚划算</a><span>|</span></span>
+                <span><a href="#nowhere">全球速卖通</a><span>|</span></span>
+                <span><a href="#nowhere">阿里巴巴国际交易市场</a><span>|</span></span>
+                <span><a href="#nowhere">1688</a><span>|</span></span>
+                <span><a href="#nowhere">阿里妈妈</a><span>|</span></span>
+                <span><a href="#nowhere">阿里旅行·去啊</a><span>|</span></span>
+                <span><a href="#nowhere">阿里云计算</a><span>|</span></span>
+                <span><a href="#nowhere">阿里通信</a><span>|</span></span>
+                <span><a href="#nowhere">YunOS</a><span>|</span></span>
+                <span><a href="#nowhere">阿里旅行·去啊</a><span>|</span></span>
+                <span><a href="#nowhere">万网</a><span>|</span></span>
+                <span><a href="#nowhere">高德</a><span>|</span></span>
+                <span><a href="#nowhere">优视</a><span>|</span></span>
+                <span><a href="#nowhere">友盟</a><span>|</span></span>
+                <span><a href="#nowhere">虾米</a><span>|</span></span>
+                <span><a href="#nowhere">天天动听</a><span>|</span></span>
+                <span><a href="#nowhere">来往</a><span>|</span></span>
+                <span><a href="#nowhere">钉钉</a><span>|</span></span>
+                <span><a href="#nowhere">支付宝</a><span>|</span></span>
+            </div>
+            <div class="license">
+                <span>增值电信业务经营许可证： 浙B2-20110446 网络文化经营许可证：
+                    浙网文[2015]0295-065号 互联网医疗保健信息服务 审核同意书 浙卫网审【2014】6号 
+                    互联网药品信息服务资质证书编号：浙-（经营性）-2012-0005</span>
+                <div class="copyRightYear">© 2003-2016 TMALL.COM 版权所有</div>
+                <div><span><img src="image/site/copyRight1.jpg">
+                    <img src="image/site/copyRight2.jpg"></span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

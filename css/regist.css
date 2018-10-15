@@ -1,0 +1,60 @@
+.regist-img{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 110px;
+    width: 150px;
+    height: 20px;;
+}
+.regist-searchDiv{
+    background-color: #c40000;
+    margin:10px 40px 20px 840px;
+    width: 300px;
+    height: 40px;
+    padding: 1px;
+}
+.regist-searchDiv input{
+    width: 220px;
+    height: 35px;
+    margin-left: 2px;
+}
+.regist-searchDiv button{
+    background-color: #c40000;
+    color:white;
+    border: 0px transparent;
+    font-size: 16px;
+    margin: 5px 5px 5px;
+}
+.registdiv{
+    width: 500px;
+    height: 430px;
+    margin: 10px auto;
+}
+.registtable{
+    height: 230px;
+    margin-top:80px;
+    margin-left: 100px;
+}
+.registtd1{
+    font-size: 13px;
+    font-weight: bold;
+}
+.registtd2{
+    font-size: 13px;
+}
+.registtd1,.registtd2{
+    text-align: right;
+    padding-right: 60px;
+}
+.registtable input{
+    width: 210px;
+    height: 37px;
+    border: 1px solid;
+    border-color: #DEDEDE;
+}
+.registbutton{
+    width: 160px;
+    height: 37px;
+    background-color: #c40000;
+    color: white;
+    margin:20px auto;
+}

@@ -1,0 +1,276 @@
+.TV-div{
+    width: 1000px;height:600px;margin: 10px auto;
+    position: relative;
+}
+.left-div{
+    width: 421px;
+    height: 516px;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+.bigimg-div{
+    width: 396px;
+    height: 400px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 1px solid;
+    border-color: #F2F2F2;
+}
+.bigimg{
+    width: 380px;
+    height: 380px;
+    margin: 10px 8px;
+}
+.imgtotal{
+    width: 360px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+.smallimg{
+    width: 56px;
+    height: 56px; 
+    margin: 2px;
+}
+.smallimg:hover{
+    border: 2px solid;
+    border-color: black;
+}
+.right-div{
+    width: 555px;
+    height: 485px;
+    position: absolute;
+    left: 431px;
+    top: 35px;
+}
+.rightdiv1{
+    font-size: 15px;
+    font-weight: bold;
+}
+.rightdiv2{
+    font-size: 12px;
+    color: #DD2727;
+    margin-bottom: 15px;
+}
+.rightdiv3{
+    width: 533px;
+    height: 42px;
+    background-color: #2DA77A;
+    color: white;
+    padding-top: 8px;
+    padding-left: 122px;
+}
+.right3span1{
+    font-size: 17px;
+    font-weight: bold;
+}
+.right3span2{
+    font-size: 12px;
+    color: #FFC058;
+}
+.rightdiv4{
+    width: 533px;
+    height: 105px;
+    padding-left: 8px;
+    padding-top: 10px;
+    background-image: url(G:/web_work/tianmao/image/site/TV-detail/priceBackground.png);
+}
+.righttable{
+    width: 283px;
+    height: 85px;
+}
+.righttd2{
+    color: gray;
+}
+.righttd3{
+    color: #B2B3B2;
+}
+.righttd4{
+    color: gray;
+    text-decoration: line-through;
+}
+.righttd6{
+    color:#C40000;
+    font-size: 30px;
+    font-weight: bold;
+}
+.righttd6span{
+    font-size: 20px;
+    color:#C40000;
+}
+.rightdiv5{
+    width: 533px;
+    height: 40px;
+    margin-top: 20px;
+    border-top: 1px dotted #C9C9C9;
+    border-bottom: 1px dotted #C9C9C9;
+    padding-top: 6px;
+}
+.spanleft{
+    margin-left: 100px;
+    color: #999;
+}
+.spanright{
+    color: #C40000;
+    font-weight: bold;
+}
+.spancss{
+    margin-left: 100px;
+    font-size: 18px;
+    color: #C9C9C9;
+}
+.numberdiv{
+    width: 200px;
+    height: 43px;
+    margin-top: 20px;
+}
+.number1{
+    margin-left: 5px;
+    float: left;
+    color: #999;
+}
+.inputnum{
+    float: left;
+}
+.numinput{
+    margin-left: 5px;
+    width: 40px;
+    height: 30px;
+    border: 1px solid #999;
+}
+.arrow{
+    margin-left: 5px;
+    width: 18px;
+    height: 30px;
+    float: left;
+}
+.updown{
+    width: 18px;
+    height: 12px;
+    margin-top: -10px;
+    padding-left: 4px;
+    border: 1px solid #999;
+    display: inline-block;
+}
+.number1{
+    margin-top: 8px;
+    color: #999;
+}
+.buybutton{
+    width: 178px;
+    height: 40px;
+    border: 1px solid #C40000;
+    color: #C40000;
+    font-size: 16px;
+    margin-left: 70px;
+    margin-top: 20px;
+    background-color: #FFEDED;
+}
+.carbutton{
+    width: 178px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    margin-left: 25px;
+    border: 1px solid transparent;
+    background-color: #C40000;
+}
+.productpicture{
+    width:790px;
+    margin:40px auto;
+}
+.productdetail-div{
+    border: 1px solid #dfdfdf;
+    border-left-width: 0px;
+}
+.detaildiv{
+    border-left: 1px solid #cfbfb1;
+    border-right: 1px solid #cfbfb1;
+    color: #C40000;
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    position: relative;
+}
+.detaildiv:before{
+    content: "";
+    display: block;
+    border-top: 2px solid #C40000;
+    width: 90px;
+    height: 0;
+    position: absolute;
+    top: -1px;
+    margin-left: -1px;
+}
+.detaildiv:after{
+    content: "";
+    display: block;
+    border-color: #C40000 transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: -1px;
+    margin-left: -5px;
+}
+.evalutiondiv{
+    padding: 0 20px;
+    border-right: 1px dotted #d2d2d2;;
+    color: black;
+}
+.parameter{
+    padding: 45px 0;
+    border: 1px solid #dfdfdf;
+}
+.parameter span{
+    color: #666666;
+    width: 220px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.detailtitle{
+    color: #999999;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+.productevalution{
+    width:790px;
+    margin:40px auto;
+}
+.productdetail-div2{
+    border: 1px solid #dfdfdf;
+    margin-bottom: 40px;
+}
+.detaildiv2{
+    padding: 0 20px;
+    color: black;
+}
+.evalutiondetail{
+    border-bottom: 1px solid #dfdfdf;
+    height: 115px;
+    position: relative;
+}
+.evalutionleft{
+    width: 630px;
+    position: absolute;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.evalutiondate{
+    color: #999999;
+    display: block;
+    margin-top: 20px;
+}
+.evalutionname{
+    width: 140px;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 665px;
+}

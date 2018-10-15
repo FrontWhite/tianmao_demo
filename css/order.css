@@ -1,0 +1,107 @@
+.order-div{
+    width: 1015px;
+    margin: 20px auto;
+    position: relative;
+}
+.ordertitle-div{
+    margin-top: 40px;
+    border-bottom: 2px solid #E8E8E8;
+    padding-bottom: 10px;
+}
+.ordertitlecss{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    border-right: 1px solid #E8E8E8;
+    margin-left: 18px;
+    padding-right: 18px;
+}
+.ordertitlecss:hover{
+    color: #c40000;
+    text-decoration: none;
+}
+.orderall{
+    color: #c40000;
+}
+.ordertitle{
+    height: 42px;
+    background-color: #F5F5F5;
+    margin: 20px auto;
+    padding-top: 15px;
+}
+.orderbody{
+    margin: 20px auto;
+}
+.orderbody-table{
+    width: 1015px;
+    border: 2px solid #ECECEC;
+}
+.orderbody-tr1{
+    height: 42px;
+    background-color: #F5F5F5;
+}
+.tianmaologo{
+    width: 15px;
+    height: 15px;
+}
+.deletelogo{
+    color: #999999;
+    font-size: 16px;
+}
+.orderbody-tr2{
+    height: 100px;
+}
+.imgoutdiv2{
+    width: 83px;
+    height: 83px;
+    display: inline-block;
+}
+.setimgdiv2{
+    width: 80px;
+    position: absolute;
+    top:60px;
+}
+.orderspan1{
+    display: block;
+    color: #999999;
+    font-size: 14px;
+}
+.orderspan2{
+    display: block;
+    font-size: 14px;
+}
+.orderspan3{
+    color: #3C3C3C;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+}
+.ordertd{
+    border-left: 1px solid #ECECEC;
+    text-align: center;
+}
+.orderbutton{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #66B6FF;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 5px 10px;
+}
+.orderbutton:hover{
+    background-color: rgb(50, 142, 228);
+}
+.evolutionbutton{
+    border: 1px solid #DCDCDC;
+    color: black;
+    border-radius: 2px;
+    background-color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.evolutionbutton:hover{
+    color: #c40000;
+    border-color: #c40000; 
+}

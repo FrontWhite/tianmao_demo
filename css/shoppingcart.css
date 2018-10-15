@@ -1,0 +1,121 @@
+.settlement-div{
+    width: 1015px;
+    margin: 20px auto;
+    position: relative;
+}
+.settlement-bgcolor{
+    height: 50px;
+    background-color: #E5E5E5;
+    margin-top: 20px;
+}
+.selectall{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.selectleft{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.settlementnumber{
+    font-size: 14px;
+    color: #c40000;
+    font-weight: bold;
+    margin-right: 3px;
+}
+.settlementbignumber{
+    font-size: 20px;
+    font-weight: bold;
+    color: #c40000;
+}
+.btcolor{
+    background-color: #aaaaaa;
+    color: white;
+    border: 1px solid #aaaaaa;
+    width: 53px;
+    height: 25px;
+    border-radius: 2px;
+}
+.btcolor2{
+    background-color: #aaaaaa;
+    color: white;
+    border: 1px solid #aaaaaa;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+.settlement-content{
+    height: 121px;
+    border: 0.6px solid #cccccc;
+    padding-top: 20px;
+}
+.shoppingcartimg{
+    width: 80px;
+    height: 80px;
+}
+.imgoutdiv{
+    width: 83px;
+    height: 83px;
+    border: 1px solid #EEEEEE;
+    display: inline-block;
+}
+.informationdiv{
+    margin-top: -38px;
+}
+.settlement-content a{
+    color: black;
+}
+.settlement-content a:hover{
+    color: #c40000;
+    text-decoration:underline;
+}
+.setimgdiv{
+    width: 80px;
+    position: absolute;
+    top:65px;
+}
+.settlementspan1{
+    color: #9C9C9C;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: line-through;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+.settlementspan2{
+    color: #c40000;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-left: 20px;
+}
+.inputdiv{
+    width: 80px;
+    border: 1px solid #E5E5E5;
+    padding-left: 6px;
+    margin-left: 25px;
+}
+.settlementinput{
+    margin:0 3px;
+    width: 42px;
+    height: 20px;
+    border: 1px solid #AAAAAA;
+}
+.settlementspan3{
+    margin-left: 10px;
+    color:#9C9C9C;
+    cursor: pointer;
+}
+.settlementspan3:hover{
+    color: #c40000;
+}
+.settlementdecrease{
+    cursor: pointer;
+}
+.settlementincrease{
+    cursor: pointer;
+}

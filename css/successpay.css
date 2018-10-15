@@ -1,0 +1,46 @@
+.successpaydiv{
+    width: 1015px;
+    margin: 50px auto;
+    border: 1px solid #D4D4D4;
+}
+.successpaytitle{
+    background-color: #ECFFDC;
+    padding: 20px 0 10px 25px;
+}
+.successpaytitle span{
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.paybodydiv{
+    width: 975px;
+    border-bottom: 1px dotted #DADADA;
+    margin: 20px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.paybodydiv img{
+    margin-right: 10px;
+}
+.tabdiv{
+    margin: 10px 0 10px 50px;
+}
+.tabdiv a{
+    color: #2D8CBA;
+}
+.tabdiv a:hover{
+    text-decoration: underline;
+}
+.paypriceend{
+    color: #c40000;
+    font-weight: bold;
+    font-size: 14px;
+}
+.reminddiv{
+    margin: 20px 0 20px 30px;
+}
+.remindspan{
+    color: #c40000;
+    font-weight: bold;
+}

@@ -1,0 +1,12 @@
+.transactiondiv{
+    width: 1015px;
+    margin: 40px auto 10px;
+    border: 1px solid #E5E5E5;
+    padding: 40px 0 40px 40px;
+}
+.transactiondiv span{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin-left: 15px;
+}
