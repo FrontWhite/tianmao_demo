@@ -38,8 +38,9 @@ table.tab td:hover{
 }    
 .TVdetail{
     width: 218px;
-    margin-left: 10px;
-    display: inline-block;
+    margin-left: 15px;
+    margin_bottom:20px;
+    float:left;
     border:3px solid white;
 }
 .TVdetail:hover{
